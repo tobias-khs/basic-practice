@@ -41,6 +41,24 @@ To create the docker image and container for doing node js work:
 1. `node ./simple-spend.js`
   * this will run the javascript program
 
+Then:  
+Copy paste values into `simple-spend.js`:
+- `privkey`: The private from-key
+- `addrPre`: The from-address
+- `toAddr`: The to-address (address from second account)
+- make sure everything is in mynetwork
+- make sure the balance is in satoshi (`bitcoin * balance`)
+- Execute simple-spend and copy the output transaction-ID
+- Goto transaction explorer and see balance of second address => it is 0btc
+- Goto https://live.blockcypher.com/btc-testnet/decodetx  
+  and enter that transaction-ID from before => you'll get a confirmation
+- Click the link to broadcast and hit the `broadcast` button from that page
+  in order to broadcast the transaction
+- check back the balance of second address to see the updated balance
+
+Other links:
+- https://bitcoinfees.info/
+
 ## Perl BTC Wallet
 
 For Perl, we have [a simple program for transactions set up](pl/simple-wallet.pl).
